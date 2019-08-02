@@ -3049,20 +3049,20 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 }
 
 .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
-  color: #66615B;
+  color: white;
 }
 
 .navbar.navbar-transparent a:not(.dropdown-item):not(.btn).disabled {
   opacity: .5;
-  color: #66615B;
+  color: white;
 }
 
 .navbar.navbar-transparent .button-bar {
-  background: #66615B;
+  background: white;
 }
 
 .navbar.navbar-transparent .nav-item .nav-link:not(.btn) {
-  color: #66615B;
+  color: white;
 }
 
 .navbar.navbar-transparent .nav-item.active .nav-link:not(.btn),
@@ -6427,5 +6427,22 @@ License - nucleoapp.com/license/
     padding: 15px;
   }
 }
-
 /*# sourceMappingURL=dashboard-free.css.map */
+
+/**/
+#formGroupExampleInput::placeholder {
+ color:white;
+}
+
+#formGroupExampleInput::-webkit-input-placeholder {
+  color: white;
+}
+#formGroupExampleInput::-moz-placeholder {
+  color: white;
+}
+#formGroupExampleInput:-ms-input-placeholder {
+  color: white;
+}
+#formGroupExampleInput:-moz-placeholder {
+  color: white;
+}
