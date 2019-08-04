@@ -171,47 +171,64 @@
                     </div>
                 </form>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link btn-magnify" href="#">
-                            <i class="nc-icon nc-layout-11" style="color: white!important;"></i>
-                            <p>
-                                <span class="d-lg-none d-md-block">Stats</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item btn-rotate dropdown" style="color: white!important;">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="nc-icon nc-bell-55" style="color: white!important;"></i>
-                            <p>
-                                <span class="d-lg-none d-md-block">Opciones</span>
-                            </p>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <hr class="">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                <strong style="color: red;">                                
-                                    <i class="nc-icon nc-button-power" style="color: red!important;"></i>
-                                    Cerrar Sesión
-                                </strong>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
+                    @guest
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('login') }}"> 
+                                <i class="nc-icon nc-bank"></i>
+                                {{ __('Ingresar') }} 
                             </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn-rotate" href="#">
-                            <i class="nc-icon nc-settings-gear-65"></i>
-                            <p>
-                                <span class="d-lg-none d-md-block" style="color: white!important;">Account</span>
-                            </p>
-                        </a>
-                    </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">
+                                <i class="nc-icon nc-badge"></i>
+                                {{ __('Registrar') }}
+                            </a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link btn-magnify" href="#">
+                                <i class="nc-icon nc-layout-11" style="color: white!important;"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Stats</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item btn-rotate dropdown" style="color: white!important;">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="nc-icon nc-bell-55" style="color: white!important;"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Opciones</span>
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <hr class="">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    <strong style="color: red;">                                
+                                        <i class="nc-icon nc-button-power" style="color: red!important;"></i>
+                                        Cerrar Sesión
+                                    </strong>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-rotate" href="#">
+                                <i class="nc-icon nc-settings-gear-65"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block" style="color: white!important;">Account</span>
+                                </p>
+                            </a>
+                        </li>
+                    @endguest
+                    
+                   
                 </ul>
             </div>
         </div>

@@ -2,10 +2,9 @@
 
     @section('content')
         <div class="card">
-            <div class="card-header text-center">
+            <div class="card-header text-center" style="background: black!important; color: white!important; padding-bottom: 15px!important;">
                 <strong>Dashboard</strong>
             </div>
-            <hr class="my-4">
             <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
