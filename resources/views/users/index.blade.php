@@ -7,7 +7,7 @@
                         <h4 class="card-title">Tabla De Usuarios</h4>
                     </div>
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive table-hover">
                         <table class="table text-center">
                             <thead class=" text-primary">
                                 <th>Nombre</th>
@@ -41,6 +41,9 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="card-footer">
+                <a class="btn btn-success btn-round active" href="{{ url('/users/create') }}">Agregar</a>
                 </div>
             </div>
         </div>

@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@home');
 Route::get('/users', 'UserController@index');                           // Listar vista index
 Route::get('/users/{id}/show', 'UserController@show');                  // Carga Vista Show con su respectivo ID 
 Route::post('/users/{id}/update','UserController@update');              // Actualiza los datos del Respectivo ID
+Route::get('/users/create', 'UserController@create');                   // Carga Vista Create User
+Route::post('/users/store', 'UserController@store');                    // Almacena el registro nuevo
