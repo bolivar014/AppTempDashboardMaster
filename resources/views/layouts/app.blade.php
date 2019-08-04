@@ -180,7 +180,7 @@
                         </a>
                     </li>
                     <li class="nav-item btn-rotate dropdown" style="color: white!important;">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="nc-icon nc-bell-55" style="color: white!important;"></i>
                             <p>
                                 <span class="d-lg-none d-md-block">Opciones</span>
@@ -190,6 +190,18 @@
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <a class="dropdown-item" href="#">Something else here</a>
+                            <hr class="">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <strong style="color: red;">                                
+                                    <i class="nc-icon nc-button-power" style="color: red!important;"></i>
+                                    Cerrar Sesión
+                                </strong>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </a>
                         </div>
                     </li>
                     <li class="nav-item">
