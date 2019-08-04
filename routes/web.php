@@ -19,5 +19,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
 
 // Rutas Users
-Route::get('/users', 'UserController@index');
-Route::get('/users/{id}/show', 'UserController@show');
+Route::get('/users', 'UserController@index');                           // Listar vista index
+Route::get('/users/{id}/show', 'UserController@show');                  // Carga Vista Show con su respectivo ID 
+Route::post('/users/{id}/update','UserController@update');              // Actualiza los datos del Respectivo ID
