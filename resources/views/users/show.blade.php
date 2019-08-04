@@ -127,6 +127,7 @@
                             </div>
                             <div class="row">
                                 <div class="update ml-auto mr-auto">
+                                    <a type="submit" class="btn btn-danger btn-round" value="Regresar" href="{{ url('/users') }}">Regresar</a>
                                     <button type="submit" class="btn btn-primary btn-round" value="Actualizar">Actualizar</button>
                                 </div>
                             </div>
