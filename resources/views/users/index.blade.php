@@ -30,7 +30,7 @@
                                             <a href="{{ url('/users/'.$user->id.'/show') }}" title="Ver">
                                                 <i class="nc-icon nc-zoom-split text-primary" style="font-size: 30px!important;"></i>
                                             </a>
-                                            <a href="#" title="Editar">
+                                            <a href="{{ url('/users/'.$user->id.'/edit') }}" title="Editar">
                                                 <i class="nc-icon nc-single-02 text-success" style="font-size: 30px!important;"></i>
                                             </a>
                                         </td>

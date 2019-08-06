@@ -23,4 +23,5 @@ Route::get('/users', 'UserController@index');                           // Lista
 Route::get('/users/{id}/show', 'UserController@show');                  // Carga Vista Show con su respectivo ID 
 Route::post('/users/{id}/update','UserController@update');              // Actualiza los datos del Respectivo ID
 Route::get('/users/create', 'UserController@create');                   // Carga Vista Create User
-Route::post('/users/store', 'UserController@store');                    // Almacena el registro nuevo
+Route::post('/users/store', 'UserController@store');                    // Almacena el nuevo registro de User
+Route::get('/users/{id}/edit', 'UserController@edit');

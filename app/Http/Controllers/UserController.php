@@ -68,11 +68,18 @@ class UserController extends Controller
         $user->country = $request->input('txtCountry');
         $user->code_country = $request->input('txtZipCode');
         $user->about_me = $request->input('txtAboutMe');
-        $user->save();
+        $user->save(); // Guardamos Cambios
 
-        
+        // Listamos
         $users = User::Paginate(10);
-
         return view('users.index')->with(compact('users'));
+    }
+
+    //
+    public function edit($id)
+    {
+        $user = User::find($id);
+
+        return view('/users/edit')->with(compact('user'));
     }
 }

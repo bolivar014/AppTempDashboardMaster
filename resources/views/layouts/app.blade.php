@@ -170,18 +170,7 @@
                 </form>
                 <ul class="navbar-nav">
                     @guest
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('login') }}"> 
-                                <i class="nc-icon nc-bank"></i>
-                                {{ __('Ingresar') }} 
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">
-                                <i class="nc-icon nc-badge"></i>
-                                {{ __('Registrar') }}
-                            </a>
-                        </li>
+                       
                     @else
                         <li class="nav-item">
                             <a class="nav-link btn-magnify" href="#">
@@ -193,7 +182,7 @@
                         </li>
                         <li class="nav-item btn-rotate dropdown" style="color: white!important;">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="nc-icon nc-bell-55" style="color: white!important;"></i>
+                                <i class="nc-icon nc-settings-gear-65" style="color: white!important;"></i>
                                 <p>
                                     <span class="d-lg-none d-md-block">Opciones</span>
                                 </p>
@@ -218,7 +207,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-rotate" href="#">
-                                <i class="nc-icon nc-settings-gear-65"></i>
+                                <i class="nc-icon nc-bell-55"></i>
                                 <p>
                                     <span class="d-lg-none d-md-block" style="color: white!important;">Account</span>
                                 </p>
